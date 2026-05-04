@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-primary: #dc2626;
+  --color-primary-hover: #b91c1c;
+  --color-primary-light: #fca5a5;
+  --color-secondary: #16a34a;
+  --color-secondary-hover: #15803d;
+  --color-secondary-light: #86efac;
+
+  --color-dark-950: #050505;
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #111111;
+  --color-dark-700: #1a1a1a;
+  --color-dark-600: #242424;
+  --color-dark-500: #303030;
+  --color-dark-400: #404040;
+
+  --color-gray-muted: #6b7280;
+  --color-gray-light: #9ca3af;
+  --color-gray-bright: #d1d5db;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* ─── Light theme (default) ─────────────────────────────── */
+:root {
+  --bg-base:    #ffffff;
+  --bg-surface: #f8f9fa;
+  --bg-card:    #ffffff;
+  --bg-shade:   #f1f5f9;
+  --bg-footer:  #0f172a;
+
+  --navbar-bg:        rgba(255, 255, 255, 0.95);
+  --navbar-mobile-bg: #f8f9fa;
+
+  --text-primary:   #111827;
+  --text-secondary: #374151;
+  --text-muted:     #4b5563;
+  --text-subtle:    #6b7280;
+
+  --border:        rgba(0, 0, 0, 0.07);
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-medium: rgba(0, 0, 0, 0.10);
+  --border-strong: rgba(0, 0, 0, 0.15);
+
+  --overlay-subtle: rgba(0, 0, 0, 0.025);
+  --overlay-soft:   rgba(0, 0, 0, 0.04);
+  --overlay-medium: rgba(0, 0, 0, 0.06);
+  --overlay-strong: rgba(0, 0, 0, 0.09);
+
+  --watermark: rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Dark theme ─────────────────────────────────────────── */
+.dark {
+  --bg-base:    #0a0a0a;
+  --bg-surface: #0d0d0d;
+  --bg-card:    #111111;
+  --bg-shade:   #080808;
+  --bg-footer:  #080808;
+
+  --navbar-bg:        rgba(10, 10, 10, 0.95);
+  --navbar-mobile-bg: #0f0f0f;
+
+  --text-primary:   #f5f5f5;
+  --text-secondary: #d1d5db;
+  --text-muted:     #9ca3af;
+  --text-subtle:    #6b7280;
+
+  --border:        rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --overlay-subtle: rgba(255, 255, 255, 0.03);
+  --overlay-soft:   rgba(255, 255, 255, 0.05);
+  --overlay-medium: rgba(255, 255, 255, 0.08);
+  --overlay-strong: rgba(255, 255, 255, 0.10);
+
+  --watermark: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-card);
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
+}
+
+.gradient-text-red {
+  background: linear-gradient(135deg, #dc2626, #f87171);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, #16a34a, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-mixed {
+  background: linear-gradient(135deg, #dc2626, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-red {
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 30px rgba(22, 163, 74, 0.3);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(220, 38, 38, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 38, 38, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.dark .grid-bg {
+  background-image:
+    linear-gradient(rgba(220, 38, 38, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
+}
+
+
