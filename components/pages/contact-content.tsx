@@ -16,8 +16,8 @@ interface FormState {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const LAT = 23.780255721531017;
-const LNG = 90.42583784376741;
+const LAT = 23.7736;
+const LNG = 90.4254;
 
 export default function ContactPageContent() {
   const [form, setForm] = useState<FormState>({
@@ -65,7 +65,7 @@ export default function ContactPageContent() {
     {
       Icon: MapPin,
       label: "Location",
-      value: "Dhaka, Bangladesh",
+      value: "Floor 10/B, Manama Tower, Ga-99/3 A/B, Middle Badda, Dhaka-1212",
       href: mapsLink,
       color: "red",
     },
@@ -331,8 +331,9 @@ export default function ContactPageContent() {
                 <span className="text-[var(--text-primary)] font-semibold text-sm">Ultra-X BD</span>
               </div>
               <p className="text-[var(--text-muted)] text-xs leading-relaxed">
-                Dhaka, Bangladesh<br />
-                23.7803° N, 90.4258° E
+                Floor 10/B, Manama Tower<br />
+                Ga-99/3 A/B, Middle Badda<br />
+                Dhaka-1212, Bangladesh
               </p>
               <a
                 href={mapsLink}

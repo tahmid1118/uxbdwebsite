@@ -1,20 +1,21 @@
-import Hero from "@/components/home/hero";
-import StatsSection from "@/components/home/stats-section";
-import ServicesSection from "@/components/home/services-section";
 import AboutSection from "@/components/home/about-section";
-import PortfolioSection from "@/components/home/portfolio-section";
 import CtaSection from "@/components/home/cta-section";
+import GallerySection from "@/components/home/gallery-section";
+import Hero from "@/components/home/hero";
+import PartnershipSection from "@/components/home/partnership-section";
+import RepresentativesSection from "@/components/home/representatives-section";
+import ServicesSection from "@/components/home/services-section";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsSection />
       <ServicesSection />
       <AboutSection />
-      <PortfolioSection />
+      <PartnershipSection />
+      <RepresentativesSection />
+      <GallerySection />
       <CtaSection />
     </>
   );
 }
-

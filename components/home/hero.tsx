@@ -1,12 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight, Code2, Cpu, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, ChevronDown, Code2, Cpu, ShieldCheck, Zap } from "lucide-react";
 
 const floatingIcons = [
   { Icon: Cpu, x: "10%", y: "20%", delay: 0, color: "text-red-500" },
-  { Icon: ShieldCheck, x: "85%", y: "15%", delay: 0.3, color: "text-green-500" },
+  {
+    Icon: ShieldCheck,
+    x: "85%",
+    y: "15%",
+    delay: 0.3,
+    color: "text-green-500",
+  },
   { Icon: Code2, x: "75%", y: "65%", delay: 0.6, color: "text-red-400" },
   { Icon: Zap, x: "5%", y: "70%", delay: 0.9, color: "text-green-400" },
 ];
@@ -67,9 +73,13 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mb-6"
         >
-          <span className="block text-[var(--text-primary)]">Powering Japan&apos;s</span>
+          <span className="block text-[var(--text-primary)]">
+            Powering Japan&apos;s
+          </span>
           <span className="block gradient-text-red mt-2">IT Solutions</span>
-          <span className="block text-[var(--text-primary)] mt-2">from Bangladesh</span>
+          <span className="block text-[var(--text-primary)] mt-2">
+            from Bangladesh
+          </span>
         </motion.h1>
 
         {/* Description */}
@@ -92,10 +102,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href="/portfolio"
+            href="/services"
             className="group flex items-center gap-2 px-7 py-3.5 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-red-600/30 active:scale-95"
           >
-            View Our Work
+            Explore Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
@@ -113,34 +123,24 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.6 }}
           className="mt-14 flex flex-wrap items-center justify-center gap-2"
         >
-          {["C/C++", "React", "Next.js", "UEFI", ".NET", "Android SDK", "iOS", "Windows API"].map(
-            (tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1 text-xs font-medium text-[var(--text-subtle)] bg-[var(--overlay-subtle)] border border-[var(--border)] rounded-full hover:border-[var(--border-medium)] hover:text-[var(--text-secondary)] transition-colors"
-              >
-                {tech}
-              </span>
-            )
-          )}
+          {[
+            "C/C++",
+            "React",
+            "Next.js",
+            "UEFI",
+            "Android SDK",
+            "iOS",
+            "Windows API",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 text-xs font-medium text-[var(--text-subtle)] bg-[var(--overlay-subtle)] border border-[var(--border)] rounded-full hover:border-[var(--border-medium)] hover:text-[var(--text-secondary)] transition-colors"
+            >
+              {tech}
+            </span>
+          ))}
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[var(--text-subtle)] text-xs tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <ChevronDown className="w-4 h-4 text-[var(--text-subtle)]" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

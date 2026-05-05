@@ -1,15 +1,21 @@
-import type { Service, TeamMember, PortfolioItem, Stat, NavItem } from "@/types";
+import type {
+  NavItem,
+  PortfolioItem,
+  Representative,
+  Service,
+  Stat,
+  TeamMember,
+} from "@/types";
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const stats: Stat[] = [
-  { value: "2019", label: "Founded" },
+  { value: "2019", label: "Established" },
   { value: "50", label: "Projects Delivered", suffix: "+" },
   { value: "5", label: "Core Products", suffix: "+" },
   { value: "100", label: "Client Satisfaction", suffix: "%" },
@@ -47,28 +53,13 @@ export const services: Service[] = [
     color: "green",
   },
   {
-    id: "deployment",
-    icon: "Server",
-    title: "OS Deployment & Backup",
-    description:
-      "Streamline Windows OS installation and restoration for manufacturers, kitting operations, and IT departments at scale.",
-    features: [
-      "Automated OS installation",
-      "Image backup & restore",
-      "Multi-device deployment",
-      "Windows PE integration",
-      "Kitting workflow support",
-    ],
-    color: "red",
-  },
-  {
     id: "mobile",
     icon: "Smartphone",
     title: "Mobile Device Management",
     description:
       "Comprehensive toolset for mobile device lifecycle — from purchase assessment and diagnostics to certified erasure and reuse certification.",
     features: [
-      "30+ diagnostic items",
+      "Diagnostic items",
       "iPhone/iPad tools",
       "Android assessments",
       "IMEI & spec reporting",
@@ -103,6 +94,66 @@ export const services: Service[] = [
       "Database design",
       "Process automation",
       "DevOps & CI/CD",
+    ],
+    color: "green",
+  },
+  {
+    id: "japan-dev",
+    icon: "Globe",
+    title: "Software for Japanese & Global Markets",
+    description:
+      "End-to-end software development tailored for Japanese and international clients, meeting the highest standards of quality and localisation.",
+    features: [
+      "Japanese market localisation",
+      "Multi-language support",
+      "Regulatory compliance",
+      "International release pipelines",
+      "Long-term maintenance",
+    ],
+    color: "red",
+  },
+  {
+    id: "rd",
+    icon: "FlaskConical",
+    title: "R&D — Innovative IT Solutions",
+    description:
+      "Research and development of next-generation IT tools, exploring emerging technologies to stay ahead of market demands.",
+    features: [
+      "Prototype development",
+      "Emerging tech exploration",
+      "Patent-ready innovation",
+      "Cross-team collaboration",
+      "Iterative R&D cycles",
+    ],
+    color: "green",
+  },
+  {
+    id: "tradeshows",
+    icon: "Building2",
+    title: "International Trade Show Participation",
+    description:
+      "Active participation in leading IT trade shows in Japan and Bangladesh, showcasing products and building global partnerships.",
+    features: [
+      "Japan & BD exhibitions",
+      "Product demonstrations",
+      "Partner networking",
+      "Market trend insights",
+      "Brand visibility",
+    ],
+    color: "red",
+  },
+  {
+    id: "uxap",
+    icon: "Handshake",
+    title: "Collaboration with ULTRA-X ASIA PACIFIC",
+    description:
+      "Strategic partnership with ULTRA-X ASIA PACIFIC to co-develop, distribute, and support world-class IT diagnostic and erasure solutions.",
+    features: [
+      "Joint product development",
+      "Technology licensing",
+      "Regional distribution",
+      "Technical support alignment",
+      "Shared quality standards",
     ],
     color: "green",
   },
@@ -195,5 +246,32 @@ export const teamMembers: TeamMember[] = [
     role: "Project Manager",
     bio: "Bridges our Bangladesh team with our Japanese client relationships ensuring flawless delivery.",
     initials: "TH",
+  },
+];
+
+export const representatives: Representative[] = [
+  {
+    name: "Tatsuya Hattori",
+    role: "CEO",
+    title: "Chief Executive Officer",
+    initials: "TH",
+    color: "red",
+    // photo: "/assets/images/ceo.jpg",
+  },
+  {
+    name: "Masami Ishibashi",
+    role: "Division Director",
+    title: "Division Director",
+    initials: "MI",
+    color: "green",
+    // photo: "/assets/images/division-director.jpg",
+  },
+  {
+    name: "Md. Lizur Rahman",
+    role: "Regional Manager",
+    title: "Regional Manager — Bangladesh",
+    initials: "LR",
+    color: "red",
+    photo: "/assets/images/Lizur2-removebg-preview.png",
   },
 ];

@@ -1,11 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, Cpu, ShieldCheck, Server, Smartphone, Code2, Layers } from "lucide-react";
 import SectionHeading from "@/components/shared/section-heading";
 import { services } from "@/data/company";
+import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  Code2,
+  Cpu,
+  FlaskConical,
+  Globe,
+  Handshake,
+  Layers,
+  Server,
+  ShieldCheck,
+  Smartphone,
+} from "lucide-react";
+import Link from "next/link";
 
 const iconMap: Record<string, LucideIcon> = {
   Cpu,
@@ -14,6 +26,10 @@ const iconMap: Record<string, LucideIcon> = {
   Smartphone,
   Code2,
   Layers,
+  Globe,
+  FlaskConical,
+  Building2,
+  Handshake,
 };
 
 export default function ServicesSection() {
@@ -75,7 +91,10 @@ export default function ServicesSection() {
                 {/* Features */}
                 <ul className="space-y-1.5">
                   {service.features.slice(0, 3).map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-xs text-[var(--text-subtle)]">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-xs text-[var(--text-subtle)]"
+                    >
                       <span
                         className={`w-1 h-1 rounded-full shrink-0 ${
                           isRed ? "bg-red-500" : "bg-green-500"

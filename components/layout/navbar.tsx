@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import ThemeToggle from "@/components/shared/theme-toggle";
 import { navItems } from "@/data/company";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "@/components/shared/theme-toggle";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,16 +34,21 @@ export default function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-[var(--navbar-bg)] backdrop-blur-md border-b border-[var(--border-subtle)] shadow-lg shadow-black/20 dark:shadow-black/50"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center glow-red group-hover:scale-110 transition-transform">
-              <Zap className="w-4 h-4 text-white fill-white" />
-            </div>
+            <Image
+              src="/uxbd_logo.png"
+              alt="Ultra-X BD Logo"
+              width={40}
+              height={40}
+              style={{ width: "auto", height: "40px" }}
+              className="rounded-sm group-hover:scale-110 transition-transform"
+            />
             <span className="font-bold text-xl tracking-tight">
               <span className="text-[var(--text-primary)]">ULTRA-X</span>
               <span className="text-red-500"> BD</span>
@@ -61,7 +67,7 @@ export default function Navbar() {
                     "relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200",
                     isActive
                       ? "text-[var(--text-primary)]"
-                      : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                      : "text-[var(--text-muted)] hover:text-[var(--text-primary)]",
                   )}
                 >
                   {isActive && (
@@ -124,7 +130,7 @@ export default function Navbar() {
                         "block px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                         isActive
                           ? "bg-red-600/10 text-red-400 border border-red-600/20"
-                          : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--overlay-soft)]"
+                          : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--overlay-soft)]",
                       )}
                     >
                       {item.label}

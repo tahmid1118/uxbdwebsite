@@ -12,6 +12,16 @@ export interface TeamMember {
   role: string;
   bio: string;
   initials: string;
+  photo?: string;
+}
+
+export interface Representative {
+  name: string;
+  role: string;
+  title: string;
+  initials: string;
+  photo?: string;
+  color: "red" | "green";
 }
 
 export interface PortfolioItem {

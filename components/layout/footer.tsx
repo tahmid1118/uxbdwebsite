@@ -1,6 +1,14 @@
-import Link from "next/link";
-import { Zap, MapPin, Mail, Globe, ExternalLink, Share2, Link2 } from "lucide-react";
 import { navItems } from "@/data/company";
+import {
+  ExternalLink,
+  Globe,
+  Link2,
+  Mail,
+  MapPin,
+  Share2,
+  Zap,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,12 +38,18 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              Bangladesh&apos;s premier IT software partner, delivering world-class diagnostic and data management solutions for Japanese clients since 2019.
+              Bangladesh&apos;s premier IT software partner, delivering
+              world-class diagnostic and data management solutions for Japanese
+              clients since 2019.
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
               {[
-                { Icon: Globe, href: "https://www.uxd.co.jp/", label: "Website" },
+                {
+                  Icon: Globe,
+                  href: "https://www.uxd.co.jp/",
+                  label: "Website",
+                },
                 { Icon: ExternalLink, href: "#", label: "LinkedIn" },
                 { Icon: Link2, href: "#", label: "GitHub" },
                 { Icon: Share2, href: "#", label: "Twitter" },
@@ -103,8 +117,11 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-sm text-gray-500">
                 <MapPin className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />
                 <span>
-                  Dhaka, Bangladesh<br />
-                  23.7803° N, 90.4258° E
+                  Floor 10/B, Manama Tower
+                  <br />
+                  Ga-99/3 A/B, Middle Badda
+                  <br />
+                  Dhaka-1212, Bangladesh
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm text-gray-500">
@@ -131,9 +148,13 @@ export default function Footer() {
 
             {/* Partner badge */}
             <div className="mt-6 p-3 rounded-lg bg-white/3 border border-white/8">
-              <p className="text-xs text-gray-600">Bangladesh Development Partner of</p>
-              <p className="text-sm font-semibold text-white mt-0.5">株式会社ウルトラエックス</p>
-              <p className="text-xs text-gray-600">Ultra-X Inc. Japan</p>
+              <p className="text-xs text-gray-600">
+                Bangladesh Development Partner of
+              </p>
+              <p className="text-sm font-semibold text-white mt-0.5">
+                株式会社ウルトラエックス
+              </p>
+              <p className="text-xs text-gray-600">Ultra-X Asia Pacific</p>
             </div>
           </div>
         </div>
@@ -147,13 +168,21 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-gray-600 text-xs">All systems operational</span>
+            <span className="text-gray-600 text-xs">
+              All systems operational
+            </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-gray-600">
-            <Link href="/privacy" className="hover:text-gray-400 transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-gray-400 transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-gray-400 transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-gray-400 transition-colors"
+            >
               Terms of Service
             </Link>
           </div>

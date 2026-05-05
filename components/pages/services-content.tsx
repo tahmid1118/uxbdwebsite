@@ -1,21 +1,63 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Cpu, ShieldCheck, Server, Smartphone, Code2, Layers } from "lucide-react";
 import SectionHeading from "@/components/shared/section-heading";
 import { services } from "@/data/company";
+import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
+import {
+  Building2,
+  Code2,
+  Cpu,
+  FlaskConical,
+  Globe,
+  Handshake,
+  Layers,
+  Server,
+  ShieldCheck,
+  Smartphone,
+} from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
-  Cpu, ShieldCheck, Server, Smartphone, Code2, Layers,
+  Cpu,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Code2,
+  Layers,
+  Globe,
+  FlaskConical,
+  Building2,
+  Handshake,
 };
 
 const techStack = [
-  { category: "Systems & Embedded", items: ["C/C++", "UEFI", "Firmware SDK", "Windows API", "Win32", "DirectX"] },
-  { category: "Mobile Platforms", items: ["Android SDK", "iOS API", "React Native", "Swift", "Kotlin"] },
-  { category: "Desktop Applications", items: [".NET / C#", "WPF", "WinForms", "WindowsPE", "DISM"] },
-  { category: "Web & Backend", items: ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "REST API"] },
-  { category: "DevOps & Tools", items: ["Git", "CI/CD", "Docker", "PowerShell", "Python", "Bash"] },
+  {
+    category: "Systems & Embedded",
+    items: ["C/C++", "UEFI", "Firmware SDK", "Windows API", "Win32", "DirectX"],
+  },
+  {
+    category: "Mobile Platforms",
+    items: ["Android SDK", "iOS API", "React Native", "Swift", "Kotlin"],
+  },
+  {
+    category: "Desktop Applications",
+    items: ["C#", "WPF", "WinForms", "WindowsPE", "DISM"],
+  },
+  {
+    category: "Web & Backend",
+    items: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "REST API",
+    ],
+  },
+  {
+    category: "DevOps & Tools",
+    items: ["Git", "CI/CD", "Docker", "PowerShell", "Python", "Bash"],
+  },
 ];
 
 export default function ServicesPageContent() {
@@ -40,9 +82,9 @@ export default function ServicesPageContent() {
               <span className="gradient-text-green">Edge</span>
             </h1>
             <p className="text-[var(--text-muted)] text-xl leading-relaxed max-w-3xl mx-auto">
-              We specialize in systems software that operates at the deepest layers
-              of the hardware stack — from UEFI firmware to mobile SDKs — delivering
-              tools trusted by Japan&apos;s IT industry.
+              We specialize in systems software that operates at the deepest
+              layers of the hardware stack — from UEFI firmware to mobile SDKs —
+              delivering tools trusted by Japan&apos;s IT industry.
             </p>
           </motion.div>
         </div>
@@ -87,7 +129,9 @@ export default function ServicesPageContent() {
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-[var(--text-primary)] font-bold text-xl mb-2">{service.title}</h3>
+                      <h3 className="text-[var(--text-primary)] font-bold text-xl mb-2">
+                        {service.title}
+                      </h3>
                       <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-5">
                         {service.description}
                       </p>
@@ -170,10 +214,30 @@ export default function ServicesPageContent() {
           />
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { step: "01", title: "Discovery & Spec", desc: "Deep dive into requirements, technical constraints, and Japanese client expectations.", color: "red" },
-              { step: "02", title: "Architecture", desc: "System design, technology selection, and API contracts established before a single line of code.", color: "green" },
-              { step: "03", title: "Agile Build", desc: "2-week sprints with daily standups, continuous integration, and milestone demos.", color: "red" },
-              { step: "04", title: "QA & Delivery", desc: "Japanese-standard quality assurance, stress testing, and final sign-off before deployment.", color: "green" },
+              {
+                step: "01",
+                title: "Discovery & Spec",
+                desc: "Deep dive into requirements, technical constraints, and Japanese client expectations.",
+                color: "red",
+              },
+              {
+                step: "02",
+                title: "Architecture",
+                desc: "System design, technology selection, and API contracts established before a single line of code.",
+                color: "green",
+              },
+              {
+                step: "03",
+                title: "Agile Build",
+                desc: "2-week sprints with daily standups, continuous integration, and milestone demos.",
+                color: "red",
+              },
+              {
+                step: "04",
+                title: "QA & Delivery",
+                desc: "Japanese-standard quality assurance, stress testing, and final sign-off before deployment.",
+                color: "green",
+              },
             ].map((step, idx) => (
               <motion.div
                 key={step.step}
@@ -185,13 +249,19 @@ export default function ServicesPageContent() {
               >
                 <div
                   className={`text-6xl font-black mb-4 ${
-                    step.color === "red" ? "gradient-text-red" : "gradient-text-green"
+                    step.color === "red"
+                      ? "gradient-text-red"
+                      : "gradient-text-green"
                   } opacity-25`}
                 >
                   {step.step}
                 </div>
-                <h3 className="text-[var(--text-primary)] font-semibold text-base mb-2">{step.title}</h3>
-                <p className="text-[var(--text-subtle)] text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-[var(--text-primary)] font-semibold text-base mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-[var(--text-subtle)] text-sm leading-relaxed">
+                  {step.desc}
+                </p>
               </motion.div>
             ))}
           </div>
